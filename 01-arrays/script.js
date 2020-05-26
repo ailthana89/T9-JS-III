@@ -5,6 +5,24 @@ const profissionais = ["desenvolvedor", "programador", "autor", "vereador", "pro
 // 2) Retornar frutas com somente a primeira letra maiúscula
 const frutas = ["maçã", "banana", "Pera", "Melancia", "pêsSSEgO", "jAcA"];
 
+//colocar minuscula 
+
+// const frutasMinusculas = frutas.map(
+//   (item) => {
+//     return item = "frutasMinusculas".toLowerCase(item);
+//    }
+//   );
+
+//   //colocar primeira letra maiuscula
+
+//   const frutasPriMaiuscula = frutasMaiuscula.map(
+//     (item) => {
+//       return "frutasMinusculas" 
+//      }
+//     );
+
+
+
 
 // filter(): retorna uma nova array com apenas com elementos que atendem à condição
 // 1) Criar nova array somente com números pares
@@ -18,6 +36,14 @@ const pessoas = [
   { nome: "Madalena", area: "TI", profissao: "infra" },
   { nome: "Monica", area: "medicina", profissao: "cardiologista"},
 ];
+
+const profissionaisTi = pessoas.filter(
+  (area) => {
+    const profissionaisTi = "TI";
+    return 'profissionaisTi';
+
+  }
+)
 
 
 // reduce(): recebe uma array e retorna um valor só. Redutor.
