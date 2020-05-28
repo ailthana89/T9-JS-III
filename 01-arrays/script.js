@@ -22,8 +22,6 @@ const profissionaisMelhores = profissionais.map(
 const frutas = ["maçã", "banana", "Pera", "Melancia", "pêsSSEgO", "jAcA"];
 
 //colocar minuscula 
-
-
 // const frutasMinusculas = frutas.map(
 //   (item) => {
 //     return item = "frutasMinusculas".toLowerCase(item);
@@ -37,8 +35,6 @@ const frutas = ["maçã", "banana", "Pera", "Melancia", "pêsSSEgO", "jAcA"];
 //       return "frutasMinusculas" 
 //      }
 //     );
-
-
 
 // retorno:
 // ["Maçã", "Banana", "Pera", "Melancia", "Pêssego", "Jaca"]
@@ -57,7 +53,6 @@ const frutasFormatadas = frutas.map(
     return letraInicial + itemSemPrimeiraLetra;
   }
 );
-
 
 // filter(): retorna uma nova array com apenas com elementos que atendem à condição
 // 1) Criar nova array somente com números pares
@@ -81,15 +76,13 @@ const pessoas = [
   { nome: "Monica", area: "medicina", profissao: "cardiologista"},
 ];
 
-
 const profissionaisTi = pessoas.filter(
-  (area) => {
+  (item ) => {
     const profissionaisTi = "TI";
     return 'profissionaisTi';
 
   }
 )
-
 
 // expectativa: 
 // const profissionaisTI = [
@@ -103,6 +96,35 @@ const profissionaisTI = pessoas.filter(
     return ehDeTI;
   }
 )
+
+// 3) Retornar uma nova array com o nome das alunas com a nota final 
+const notasAlunas = [
+  { nome: "Julia", notas: [
+      { materia: "matemática", nota: 7, peso: 1.5 },
+      { materia: "portugues", nota: 3, peso: 2 }
+    ]
+  },
+  { nome: "Zelia", notas: [
+      { materia: "matemática", nota: 6, peso: 1.5 },
+      { materia: "portugues", nota: 5, peso: 2 }
+    ]
+  },
+  { nome: "Jussara", notas: [
+      { materia: "matemática", nota: 8, peso: 1.5 },
+      { materia: "portugues", nota: 2, peso: 2 }
+    ]
+  }
+]
+
+
+
+
+
+
+
+
+
+
 
 
 // reduce(): recebe uma array e retorna um valor só. Redutor.
