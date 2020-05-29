@@ -32,7 +32,7 @@
 
 HTTP é um protocolo que faz a conexão entre um receptor, normalmente o navegador (_browser_) e um servidor. Ela é a base da transferência de dados na Web.
 
-Quando um site é acessado, seu navegador envia uma solicitação (_request_) para o servidor onde ele está hospedado. Este, por sua vez, envia uma resposta (_respose_) com o resultado dessa solicitação.
+Quando um site é acessado, seu navegador envia uma solicitação (_request_) para o servidor onde ele está hospedado. Este, por sua vez, envia uma resposta (_response_) com o resultado dessa solicitação.
 
 ![Diagrama: à esquerda um computador com o texto "client" dentro dele e a direita, uma CPU com o texto "Server". Uma flecha sai do Cliente e vai para o Servidor, com o texto "HTTP Request" como legenda. Uma outra flecha sai do Servidor e vai para o Cliente, com a legenda "HTTP Response".](./img/client-server.png)
 
@@ -156,6 +156,8 @@ Apesar de ter "XML" no seu nome, a requisição de `XMLHttpRequest` pode receber
 
 ### Anatomia de uma requisição XMLHttpRequest
 
+- [Sobre os códigos readyState](https://developer.mozilla.org/pt-BR/docs/Web/API/XMLHttpRequest/readyState);
+
 ```javascript
 // cria um novo construtor XMLHttpRequest
 const request = new XMLHttpRequest();
@@ -176,4 +178,40 @@ request.addEventListener("readystatechange", function () {
 
 // envia a requisição para o servidor
 request.send();
+```
+
+### Promises
+
+- [Promises](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise);
+- [Usando Promises](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Usando_promises);
+- [Callback Hell to Async and Await - artigo em inglês](https://blog.hellojs.org/asynchronous-javascript-from-callback-hell-to-async-and-await-9b9ceb63c8e8);
+
+Promise é um objeto que representa o sucesso ou fracasso de uma operação **assíncrona**. Elas são bastante usadas dentro de outras estruturas apresentadas no ES6.
+
+#### Anatomia de Promise
+
+- [Promise() constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise);
+
+Para criar uma nova Promise, é necessário usar a palavra-chave `new`. Existe um construtor nativo e ele retorna o objeto `Promise`.
+
+O callback (executor) da `Promise` recebe dois parâmetros: _resolve_ e _reject_. Esses parâmetros são funções geradas pelo construtor
+
+Depois disso, é possível usar os métodos `then()` e `catch()`. Ambos recebem callbacks que são executados quando há uma resolução ou rejeição da `Promise`.
+
+```javascript
+const promise = new Promise((resolve, reject) => {
+  if (condicao) {
+    resolve("resolvido!"); // dado é retornado para o then
+  } else {
+    reject("aaahh errooou"); // entra no catch
+  }
+});
+
+promise
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((err) => {
+    console.log(err);
+  });
 ```
