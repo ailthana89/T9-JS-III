@@ -10,13 +10,19 @@ const pkmPlaceholder = document.getElementById('pkmPlaceholder');
 
 const chamarRequisicao = (e) => {
   e.preventDefault();
-<<<<<<< HEAD
+
   console.log('oi')
   const requisitoBatata = new XMLHttpRequest();
   const verbo = 'GET'
   const nomePokemon = input.value
-const link = `https://pokeapi.co/api/v2/pokemon/${nomePokemon}`
+  const link = `https://pokeapi.co/api/v2/pokemon/${nomePokemon}`
   requisitoBatata.open(verbo, link, true)
+
+//    fetch(`https://pokeapi.co/api/v2/pokemon/${nomePokemon}`) 
+//     .then((guardarJson) => {return guardarJson.json()})
+//     .then(data => {
+//        console.log('data: ', data)  
+//  })
 
   requisitoBatata.addEventListener('readystatechange', ()=>{
     if(requisitoBatata.readyState === 4 && requisitoBatata.status === 200){
@@ -28,7 +34,7 @@ const link = `https://pokeapi.co/api/v2/pokemon/${nomePokemon}`
     }
   })
   requisitoBatata.send();
-=======
+
   pkmPlaceholder.innerHTML = "";
   const pkmNome = input.value.toLowerCase();
   const request = new XMLHttpRequest();
@@ -49,7 +55,7 @@ const link = `https://pokeapi.co/api/v2/pokemon/${nomePokemon}`
   })
   
   request.send();
->>>>>>> 39ec0a28fa69ea389d0b54c36665ff30ae0af9e3
+
 }
 
 form.addEventListener('submit', (e) => chamarRequisicao(e));
