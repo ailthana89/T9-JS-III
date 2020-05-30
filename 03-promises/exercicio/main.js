@@ -6,7 +6,7 @@ const bairro_input = document.getElementById("bairro")
 // const uf_input = document.getElementById("uf")
 const cep_error = document.getElementById("cep-error")
 
-<<<<<<< HEAD
+
 cep_input.addEventListener('change', () => {
     console.log(cep_input.value)
     
@@ -27,7 +27,7 @@ cep_input.addEventListener('change', () => {
             console.log(erro)
         })
 })
-=======
+
 cep_input.addEventListener("blur", function () {
     const cep = this.value.replace(/\D/g, "")
 
@@ -68,4 +68,4 @@ cep_input.addEventListener("blur", function () {
             uf_input.value = ""
         })
 })
->>>>>>> 997cb2a56e68ad810efb551bd54b16b4978e7148
+
